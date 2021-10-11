@@ -15,7 +15,7 @@ The NYTimes task completed with MVVM  and Coordinator pattern with showing list 
  
  * **ArticlesListViewModel**: Contain **ArticlesRemoteRepository** .This module responsible to get the data from the repo and send it to the viewcontroller and then viewController will send data to respective views
  
- * **Models**: Contains   **Article**  **Media**  **MediaMetaData**  **TimePeriod**
+ * **Models**: Contains   **Article** , **Media** , **MediaMetaData** , **TimePeriod**
 
  * **Coordinator**: Contains **Coordinator** and **MainCoordinator** . The responsiblity of coordinators is to handle the navigation of the app and setup the start of the app.
  
