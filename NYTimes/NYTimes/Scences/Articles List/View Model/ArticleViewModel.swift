@@ -7,15 +7,16 @@
 
 import UIKit
 
-class ArticleViewModel: NSObject {
+final class ArticleViewModel {
     let title : String
     let byLine : String
     let publishedDate : String
     var caption : String? = nil
     var imageURL : URL? = nil
-
-    
-    init(article : Article) {
+    // MARK:- Init
+    init(
+        article: Article
+    ) {
         self.title =  article.title
         self.byLine =  article.byline
         self.publishedDate = article.published_date

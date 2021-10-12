@@ -7,19 +7,24 @@
 
 import UIKit
 import Combine
-class ArticlesListViewController: UIViewController {
-    
+
+final class ArticlesListViewController: UIViewController {
     private var viewModel: ArticlesListViewModel
     private var subscriptions: Set<AnyCancellable> = []
     @IBOutlet var tableView : UITableView!
     weak var coordinator: MainCoordinator?
     
-    required init?(coder: NSCoder, andViewModel viewModel : ArticlesListViewModel) {
+    required init?(
+        coder: NSCoder,
+        andViewModel viewModel: ArticlesListViewModel
+    ) {
         self.viewModel = viewModel
         super.init(coder: coder)
     }
     
-    required init?(coder: NSCoder) {
+    required init?(
+        coder: NSCoder
+    ) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -68,7 +73,6 @@ class ArticlesListViewController: UIViewController {
         let articleViewModel = viewModel.currentDisplayedArticles[index]
         coordinator?.openArticleDetail(articleViewModel)
     }
-    
 }
 
 extension ArticlesListViewController : UITableViewDelegate,UITableViewDataSource {

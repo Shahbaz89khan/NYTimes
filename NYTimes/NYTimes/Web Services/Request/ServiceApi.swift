@@ -10,7 +10,9 @@ import Combine
 struct ServiceApi: WebAPIHandler {
     private var session = URLSession.shared
     
-    init(session : URLSession = URLSession.shared ) {
+    init(
+        session : URLSession = URLSession.shared
+    ) {
         self.session = session
     }
     

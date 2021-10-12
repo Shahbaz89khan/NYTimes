@@ -23,7 +23,7 @@ enum TimePeriod : String {
         }
     }
     
-    init(rawValue: String){
+    init(rawValue: String) {
         switch rawValue {
         case TimePeriod.Day.name:
             self = .Day
@@ -35,5 +35,4 @@ enum TimePeriod : String {
             self = .Day
         }
     }
-    
 }

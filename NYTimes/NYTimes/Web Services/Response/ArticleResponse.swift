@@ -10,11 +10,13 @@ class ArticleResponse: Decodable {
     let copyright: String
     let results: [Article]
     
-    init(status: String, copyright: String, results: [Article]) {
+    init(
+        status: String,
+        copyright: String,
+        results: [Article]
+    ) {
         self.status = status
         self.copyright = copyright
         self.results = results
     }
-    
-     
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ArticleDetailViewController: UIViewController  {
+final class ArticleDetailViewController: UIViewController  {
     
     @IBOutlet weak var imageView: AsyncImageView!
     @IBOutlet weak var imageCaption: UILabel!
@@ -17,7 +17,10 @@ class ArticleDetailViewController: UIViewController  {
     @IBOutlet weak var selectColumnView: UIView!
     
     var article: ArticleViewModel
-    required init?(coder: NSCoder, andViewModel viewModel : ArticleViewModel) {
+    required init?(
+        coder: NSCoder,
+        andViewModel viewModel: ArticleViewModel
+    ) {
         self.article = viewModel
         super.init(coder: coder)
     }
@@ -25,7 +28,6 @@ class ArticleDetailViewController: UIViewController  {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
 extension ArticleDetailViewController {
@@ -39,11 +41,9 @@ extension ArticleDetailViewController {
         if let imgURL = article.imageURL {
             imageView.loadUrl(imgURL)
         }
-        
         if let imageCaption = article.caption {
             self.imageCaption.text = imageCaption
         }
         publishedDate.text = article.publishedDate
     }
-    
 }

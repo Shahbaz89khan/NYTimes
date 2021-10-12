@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		538EED832712FF3B00A8197C /* NYTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EED822712FF3B00A8197C /* NYTimesTests.swift */; };
 		538EED8E2712FF3B00A8197C /* NYTimesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EED8D2712FF3B00A8197C /* NYTimesUITests.swift */; };
 		538EEDAB2713034A00A8197C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538EED9C2713034A00A8197C /* Assets.xcassets */; };
 		538EEDAC2713034A00A8197C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538EED9D2713034A00A8197C /* LaunchScreen.storyboard */; };
@@ -60,7 +59,6 @@
 /* Begin PBXFileReference section */
 		538EED682712FF3A00A8197C /* NYTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		538EED7E2712FF3B00A8197C /* NYTimesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYTimesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		538EED822712FF3B00A8197C /* NYTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesTests.swift; sourceTree = "<group>"; };
 		538EED842712FF3B00A8197C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		538EED892712FF3B00A8197C /* NYTimesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYTimesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		538EED8D2712FF3B00A8197C /* NYTimesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesUITests.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 			children = (
 				53D6A7BA271452E60078889F /* ArticlesListViewModelTests.swift */,
 				53D6A7B527144C000078889F /* Stub */,
-				538EED822712FF3B00A8197C /* NYTimesTests.swift */,
 				538EED842712FF3B00A8197C /* Info.plist */,
 			);
 			path = NYTimesTests;
@@ -528,7 +525,6 @@
 				53D6A7B927144F430078889F /* StubArticlesRemoteRepository.swift in Sources */,
 				53D6A7BD27146F250078889F /* StubArticleResponse.swift in Sources */,
 				53D6A7BB271452E60078889F /* ArticlesListViewModelTests.swift in Sources */,
-				538EED832712FF3B00A8197C /* NYTimesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

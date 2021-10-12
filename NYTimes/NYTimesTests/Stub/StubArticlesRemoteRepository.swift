@@ -9,7 +9,7 @@ import Foundation
 import Combine
 @testable import NYTimes
 
-class StubArticlesRemoteRepository: ArticlesRemoteRepositoryProtocol {
+final class StubArticlesRemoteRepository: ArticlesRemoteRepositoryProtocol {
     var shouldFailOnFetch:Bool = false
     var dataToReturnOnSuccess:ArticleResponse?
     var isRemoteRepoCalled = false

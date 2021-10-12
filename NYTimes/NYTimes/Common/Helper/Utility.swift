@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Utility {
+final class Utility {
     static func showAlert(title: String, message: String, on viewController: UIViewController) {
         DispatchQueue.main.async {
             let alertViewController = UIAlertController(title: title, message:

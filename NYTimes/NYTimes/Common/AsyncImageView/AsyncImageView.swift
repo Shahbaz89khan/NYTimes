@@ -9,7 +9,7 @@ import UIKit
 
 fileprivate let imageCache = NSCache<NSString, UIImage>()
 
-@objc class AsyncImageView: UIImageView {
+@objc final class AsyncImageView: UIImageView {
     
     private var indicator : UIActivityIndicatorView = UIActivityIndicatorView(style: .medium)
     override init(frame: CGRect) {

@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class ArticlesListViewModel: NSObject {
+final class ArticlesListViewModel: NSObject {
     
     private var repo:ArticlesRemoteRepository
     private var subscriptions: Set<AnyCancellable> = []
@@ -25,11 +25,12 @@ class ArticlesListViewModel: NSObject {
         }
     }
     let timePeriod:[TimePeriod] = [.Day,.Week,.Month]
-    
-    
     // Mark: - Intializater
-    
-    init(repo:ArticlesRemoteRepository = ArticlesRemoteRepository(service : ServiceApi())) {
+    init(
+        repo:ArticlesRemoteRepository = ArticlesRemoteRepository(
+            service : ServiceApi()
+        )
+    ) {
         self.repo = repo
     }
     
@@ -44,7 +45,9 @@ class ArticlesListViewModel: NSObject {
                                     }).store(in: &subscriptions)
     }
     
-    func setTimePeriod(timePeriod: TimePeriod) {
+    func setTimePeriod(
+        timePeriod: TimePeriod
+    ) {
         repo.timePeriod = timePeriod
     }
     
@@ -56,7 +59,9 @@ class ArticlesListViewModel: NSObject {
         return repo.timePeriod.name
     }
     
-    func shouldSendRequest(targetTimePeriod: TimePeriod) -> Bool {
+    func shouldSendRequest(
+        targetTimePeriod: TimePeriod
+    ) -> Bool {
         return targetTimePeriod != repo.timePeriod
     }
     
