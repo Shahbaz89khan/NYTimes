@@ -1,5 +1,5 @@
 //
-//  MainCordinator.swift
+//  MainCoordinator.swift
 //  NYTimes
 //
 //  Created by Shabaz Khan on 10.10.21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainCordinator: Cordinator {
+class MainCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     

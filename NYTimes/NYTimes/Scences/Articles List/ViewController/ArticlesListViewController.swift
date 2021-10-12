@@ -12,7 +12,7 @@ class ArticlesListViewController: UIViewController {
     private var viewModel: ArticlesListViewModel
     private var subscriptions: Set<AnyCancellable> = []
     @IBOutlet var tableView : UITableView!
-    weak var coordinator: MainCordinator?
+    weak var coordinator: MainCoordinator?
     
     required init?(coder: NSCoder, andViewModel viewModel : ArticlesListViewModel) {
         self.viewModel = viewModel
@@ -40,10 +40,11 @@ class ArticlesListViewController: UIViewController {
         viewModel.articlesReloadPublisher
             .receive(on: DispatchQueue.main)
             .sink { [weak self] status in
+                guard let strongSelf = self else { return }
                 if status {
                     self?.tableView.reloadData()
                 } else {
-                    self?.showAlertView(title: "Error", message: "Some error occurred")
+                    Utility.showAlert(title: "Error", message: "Some error occurred", on: strongSelf)
                 }
                 self?.hideActivityIndicator()
                 self?.tableView.refreshControl?.endRefreshing()

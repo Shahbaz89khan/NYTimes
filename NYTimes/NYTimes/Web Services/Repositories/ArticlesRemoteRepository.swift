@@ -14,8 +14,7 @@ protocol ArticlesRemoteRepositoryProtocol {
 }
 
 class ArticlesRemoteRepository : ArticlesRemoteRepositoryProtocol {
-    private let baseURL = "https://api.nytimes.com/svc"
-    private let apiKey = "FoFWxV0ESSQU3ehb30XrRFGHGB0jYas0"
+    
     var timePeriod = TimePeriod.Day
 
     var subscriptions: Set<AnyCancellable> = []

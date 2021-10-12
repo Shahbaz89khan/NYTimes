@@ -9,16 +9,7 @@ import UIKit
 
 extension UIViewController   {
 
-    func showAlertView(title: String, message: String) {
-        DispatchQueue.main.async {
-            let alertViewController = UIAlertController(title: title, message:
-                message, preferredStyle: .alert)
-            alertViewController.addAction(UIAlertAction(title: "OKAY", style: .default, handler: {action in
-            }))
-            self.present(alertViewController, animated: true, completion: nil)
-        }
-        
-    }
+    
     
     private var activity: UIActivityIndicatorView {
         if self.view.viewWithTag(99999) is UIActivityIndicatorView{
