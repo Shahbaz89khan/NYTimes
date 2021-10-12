@@ -25,3 +25,11 @@ final class ArticleTableViewCell: UITableViewCell {
          }
     }
 }
+
+extension ArticleTableViewCell {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        circleImageView.layer.cornerRadius = circleImageView.frame.size.height / 2.0
+        circleImageView.layer.masksToBounds = true
+    }
+}

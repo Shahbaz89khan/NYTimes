@@ -10,11 +10,9 @@ import UIKit
 final class ArticleDetailViewController: UIViewController  {
     
     @IBOutlet weak var imageView: AsyncImageView!
-    @IBOutlet weak var imageCaption: UILabel!
+    @IBOutlet weak var articleCaption: UILabel!
     @IBOutlet weak var articleDesp: UILabel!
     @IBOutlet weak var publishedDate: UILabel!
-    @IBOutlet weak var imageDownloadActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var selectColumnView: UIView!
     
     var article: ArticleViewModel
     required init?(
@@ -41,9 +39,10 @@ extension ArticleDetailViewController {
         if let imgURL = article.imageURL {
             imageView.loadUrl(imgURL)
         }
-        if let imageCaption = article.caption {
-            self.imageCaption.text = imageCaption
+        if let articleCaption = article.caption {
+            self.articleCaption.text = articleCaption
         }
         publishedDate.text = article.publishedDate
+        articleDesp.text = article.title
     }
 }

@@ -175,8 +175,8 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="YRh-Un-8cA"/>
                     <connections>
-                        <outlet property="articleDesp" destination="Nmo-dH-zsi" id="Wda-ra-HFc"/>
-                        <outlet property="imageCaption" destination="l3a-lX-3fe" id="DzT-Bg-Plw"/>
+                        <outlet property="articleCaption" destination="Nmo-dH-zsi" id="bAu-pr-9eK"/>
+                        <outlet property="articleDesp" destination="l3a-lX-3fe" id="hP1-Cw-BUS"/>
                         <outlet property="imageView" destination="NQP-AL-5kN" id="9sh-V0-4dc"/>
                         <outlet property="publishedDate" destination="BoX-Gu-q7V" id="bsV-xm-Ilb"/>
                     </connections>
